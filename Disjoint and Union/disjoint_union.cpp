@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int *parent;
 
 int find_parent(int x)
 {
@@ -25,6 +26,7 @@ int main()
 	int u,v;
 	cin>>n;
 
+	parent = new parent[n];
 	for(int i=0;i<n;i++)
 		cin>>a[i];
 
