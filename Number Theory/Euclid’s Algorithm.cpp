@@ -12,7 +12,7 @@ int GCD(int a,int b)
 	if(b==0)
 		return a;
 	else
-		return (b,a%b);
+		return GCD(b,a%b);
 }
 int main()
 {
