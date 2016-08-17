@@ -12,20 +12,20 @@ void max_heapify(int arr[],int node,int n)
 	int right = node * 2 + 1;
 	int _max = node;
 
-	if(left <n && arr[left]>arr[node])
+	if(left <=n && arr[left]>arr[node])
 		_max = left;
-	if(right < n && arr[right]>arr[node])
+	if(right <= n && arr[right]>arr[_max])
 		_max = right;
 
 	if(_max != node)
 	{
-		swap(arr[_max],arr[node]);
+		swap(arr[node], arr[_max]);
 		max_heapify(arr,_max,n);
 	}
 }
 void Heap_Util(int arr[],int n)
 {
-	for(int i=n/2;i>=0;i--)
+	for(int i=n/2;i>=1;i--)
 	{
 		max_heapify(arr,i,n);
 	}
@@ -33,7 +33,7 @@ void Heap_Util(int arr[],int n)
 
 void display(int *arr, int n)
 {
-	for(int i=0;i<n;i++)
+	for(int i=1;i<=n;i++)
 	{
 		cout<<arr[i]<<" ";
 	}
@@ -44,12 +44,12 @@ int main()
 	cin>>n;
 	int arr[n];
 
-	for(int i=0;i<n;i++)
+	for(int i=1;i<=n;i++)
         cin>>arr[i];
 
 	Heap_Util(arr,n);
 	display(arr,n);
-
+	return 0;
 }
 
 
