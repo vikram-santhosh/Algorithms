@@ -1,5 +1,6 @@
 /*
-x & (x-1) flips the right most  set bit . Count the number of flips need to fully invert the bit 
+x & (x-1) flips the right most  set bit . Count the number of flips need to make the number  
+Brian Kernighan’s Algorithm 
 */
 
 #include <bits/stdc++.h>
